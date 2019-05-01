@@ -1,2 +1,3 @@
-# react-hoc-mouse-inactivity-example
-Created with CodeSandbox
+# HOC example
+
+(test CodeSandbox)
