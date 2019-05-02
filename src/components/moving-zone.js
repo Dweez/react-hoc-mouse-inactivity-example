@@ -41,6 +41,6 @@ class MovingZone extends Component {
   }
 }
 
-const moving = withMouseMoving({ inactivityDuration: 2000 })(MovingZone);
+const moving = withMouseMoving(MovingZone);
 
 export default withStyles(styles)(moving);

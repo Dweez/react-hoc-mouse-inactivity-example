@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>HOC example: Simple mouse inactivity detection</h1>
-      <MovingZone style={{ height: "100%" }} />
+      <MovingZone inactivityDuration={5000} />
     </div>
   );
 }

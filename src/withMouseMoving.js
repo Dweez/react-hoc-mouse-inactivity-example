@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-const withMouseMoving = options => WrappedComponent => {
-  console.log(options);
+const withMouseMoving = (WrappedComponent, props) => {
   class HOCMouseMoving extends Component {
     constructor(props) {
       super(props);
@@ -22,7 +21,7 @@ const withMouseMoving = options => WrappedComponent => {
                 mouseIsMoving: false
               };
             });
-          }, options.inactivityDuration)
+          }, this.props.inactivityDuration)
         };
       });
     };
@@ -40,7 +39,7 @@ const withMouseMoving = options => WrappedComponent => {
         <WrappedComponent
           handleMouseMoving={this.handleMouseMoving}
           mouseIsMoving={this.state.mouseIsMoving}
-          inactivityDuration={options.inactivityDuration}
+          inactivityDuration={this.props.inactivityDuration}
           {...this.props}
         />
       );
